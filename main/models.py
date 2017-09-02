@@ -10,4 +10,3 @@ class blogPost(models.Model):
 	description = models.TextField(verbose_name=u'blog.text')
 	def __unicode__(self):
 		return self.title
-		
