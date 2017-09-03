@@ -11,6 +11,7 @@ def blog(request):
 	if request.method == 'POST':
 		print('lol')
 	blog_posts = blogPost.objects.all()
+	blog_posts = [blog_posts[0], blog_posts[1], blog_posts[2]]
 	print(blog_posts)
 	return render(request, 'Main/blog.html', {'blog_posts': blog_posts})
 

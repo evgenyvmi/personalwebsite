@@ -902,8 +902,8 @@ input[type="button"].btn-block {
   perspective: 1000px; }
 
 .carousel-item img{
-  max-width: 75%;
-  max-height: 75%;
+  max-width: 80%;
+  max-height: 80%;
 }
 
 .carousel-item.active,
@@ -4451,6 +4451,10 @@ a.bg-danger:focus, a.bg-danger:hover {
 .w-75 {
   width: 75% !important; }
 
+.w-90{
+  width: 90% !important;
+}
+
 .w-100 {
   width: 100% !important; }
 
@@ -5778,6 +5782,24 @@ a.text-danger:focus, a.text-danger:hover {
     background-image: linear-gradient(20deg, #FF540D, rgba(13, 4, 0, 0.5));
     background-repeat: repeat-x;
     pointer-events: none; }
+
+.blog-sidebar{
+  float: right;
+}
+
+.my-cover{
+  min-height: 500px;
+}
+
+@media (max-width: 576px) {
+.my-cover{
+  min-height: 300px;
+}
+}
+
+.card-block p{
+  max-height: 300px;
+}
 
 body > * {
   background-size: cover; }
