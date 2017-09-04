@@ -1643,6 +1643,10 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     .container {
       width: 1140px;
       max-width: 100%; } }
+  @media (min-width: 1500px) {
+    .container {
+      width: 1420px;
+      max-width: 100%; } }
 
 .container-fluid {
   width: 100%;
@@ -5787,6 +5791,12 @@ a.text-danger:focus, a.text-danger:hover {
   float: right;
 }
 
+@media (max-width: 1500) {
+.blog-sidebar{
+    padding-left: 5em;
+}
+}
+
 .my-cover{
   min-height: 500px;
 }
@@ -5797,9 +5807,6 @@ a.text-danger:focus, a.text-danger:hover {
 }
 }
 
-.card-block p{
-  max-height: 300px;
-}
 
 body > * {
   background-size: cover; }
