@@ -1,0 +1,24 @@
+{% extends 'Main/base.html' %}
+  {% block content %}
+  <div class="blog-header">
+      <div class="container">
+	      <div class="row">
+	        <div class="col-sm-12 blog-main">
+	          <div class="card">
+	            <h2 class="blog-post-title card-header">
+	            {% if user.is_authenticated %}
+	            <a href="{% url 'blog_edit' post.id %}"><i class="fa fa-edit">  </i></a>
+	            <a href="{% url 'blog_delete' post.id %}"><i class="float-right fa fa-trash-o">  </i></a>
+	            {% endif %}{{post.title}}</h2>
+	            <div class="card-block">
+	              <p class="blog-post-meta card-text">{{post.date}} by <a href="#">Evgeny</a></p>
+
+	              <p class="card-text ">{{post.description|safe}}</p>
+	            </div>
+	          </div>
+	      </div>
+  		</div>
+	</div>
+</div>
+          <!-- /.blog-post -->
+  {% endblock %}

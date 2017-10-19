@@ -123,3 +123,37 @@ STATIC_URL = '/static1/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+SUMMERNOTE_CONFIG = {
+    # Using SummernoteWidget - iframe mode
+#    'iframe': True,  # or set False to use SummernoteInplaceWidget - no iframe mode
+
+    # Using Summernote Air-mode
+#    'airMode': False,
+
+    # Use native HTML tags (`<b>`, `<i>`, ...) instead of style attributes
+    # (Firefox, Chrome only)
+#    'styleWithTags': True,
+
+    # Set text direction : 'left to right' is default.
+#    'direction': 'ltr',
+
+    # Change editor size
+    'width': '100%',
+    'height': '480',
+
+    # Use proper language setting automatically (default)
+#    'lang': None,
+
+    # Or, set editor language/locale forcely
+#    'lang': 'ko-KR',
+
+    # Customize toolbar buttons
+#    'toolbar': [
+#        ['style', ['style']],
+#        ['style', ['bold', 'italic', 'underline', 'clear']],
+#        ['para', ['ul', 'ol', 'height']],
+#        ['insert', ['link']],
+#    ],
+
+}

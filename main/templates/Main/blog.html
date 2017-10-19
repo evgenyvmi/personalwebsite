@@ -9,16 +9,17 @@
             <h2 class="blog-post-title card-header">
             {% if user.is_authenticated %}
             <a href="{% url 'blog_edit' post.id %}"><i class="fa fa-edit">  </i></a>
-            {% endif %}{{post.title}}</h2>
+            <a href="{% url 'blog_delete' post.id %}"><i class="float-right fa fa-trash-o">  </i></a>
+            {% endif %}<a href="{% url 'post' post.id %}">{{post.title}}</a></h2>
             <div class="card-block">
               <p class="blog-post-meta card-text">{{post.date}} by <a href="#">Evgeny</a></p>
 
-              <p class="card-text">{{post.description}}</p>
+              <p class="card-text ">{{post.description|safe}}</p>
             </div>
           </div>
           <!-- /.blog-post -->
         {% endfor %}
-        <nav class="blog-pagination py-2">
+        <nav class="float-right blog-pagination py-2">
             <a class="btn btn-outline-secondary {% if not page %} disabled {% endif %}" href="{% url 'blog_page' page|add:'-1' %}">Newer</a>
             <a class="btn btn-outline-primary" href="{% url 'blog_page' page|add:'1' %}">Older</a>
           </nav>

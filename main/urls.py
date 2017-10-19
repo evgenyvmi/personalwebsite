@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from . import views
-from django.views.generic import TemplateView
+from .views import *
+from django.views.generic import TemplateView, DeleteView
 
 
 urlpatterns = [
@@ -10,6 +11,8 @@ urlpatterns = [
 	url(r'^blog/create$', views.blog_create, name = 'blog_create'),
 	url(r'^blog/page/([-1,0-9]{1,2})$', views.blog_page, name = 'blog_page'),
 	url(r'^blog/edit/([-1,0-9]{1,2})$', views.blog_edit, name = 'blog_edit'),
+	url(r'^blog/post/([-1,0-9]{1,2})$', views.post, name = 'post'),
+	url(r'^blog/(?P<pk>\d+)/delete/$', BlogDeleteView.as_view(), name='blog_delete'),
 	url(r'^music/$', views.music, name = 'music'),
 	url(r'^music/create$', views.music, name = 'music_create'),
 	url(r'^art/$', views.art, name = 'art'),
